@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<%=h1 = @item.name%>
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency @item.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Seller:</strong>
+  <%= @item.seller %>
+</p>
+
+<%= link_to "Add to Cart", add_cart_path, method: post %>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
